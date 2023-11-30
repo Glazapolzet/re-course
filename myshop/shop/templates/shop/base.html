@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      {% block title %}
+        {% translate "My shop" %}
+      {% endblock %}
+    </title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      {% get_current_language as LANGUAGE_CODE %}
+      {% get_available_languages as LANGUAGES %}
+      {% get_language_info_list for LANGUAGES as languages %}
+      <div class="header__languages">
+        <p class="header__text header__text_bold">
+          {% translate "Language" %}:
+        </p>
+        <ul class="header__languages-list">
+          {% for language in languages %}
+            <li class="header__languages-list-item">
+              <a
+                href="/{{ language.code }}/"
+                class="link header__link"
+              >
+                <p
+                  {% if language.code == LANGUAGE_CODE %}
+                    class="header__text header__text_decorated"
+                  {% else %}
+                    class="header__text"
+                  {% endif %}
+                >
+                  {{ language.name_local }}
+                </p>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <a href="/" class="link header__link">
+        <p class="header__text header__text_bold">
+          {% trans "My shop" %}
+        </p>
+      </a>
+      <div class="header__cart">
+        {% with total_items=cart|length %}
+          {% if cart|length > 0 %}
+            <p class="header__text header__text_bold">
+              {% translate "Your cart:" %}
+            </p>
+            <a class="link header__link" href="{% url 'cart_detail' %}">
+              <p class="header__text header__text_decorated">
+                {% blocktranslate with total_items_plural=total_items|pluralize total_price=cart.get_total_price trimmed %}
+                  {{ total_items }} item{{ total_items_plural }}, ${{ total_price }}
+                {% endblocktranslate %}
+              </p>
+            </a>
+          {% else %}
+            {% translate "Your cart is empty." %}
+          {% endif %}
+        {% endwith %}
+      </div>
+    </header>
+    <main class="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

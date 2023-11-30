@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-30 16:09+0300\n"
+"PO-Revision-Date: 2023-11-30 13:07+0000\n"
+"Last-Translator:   <test@ya.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: orders/models.py:10
+msgid "first name"
+msgstr "имя"
+
+#: orders/models.py:11
+msgid "last name"
+msgstr "фамилия"
+
+#: orders/models.py:12
+msgid "e-mail"
+msgstr "e-mail"
+
+#: orders/models.py:13
+msgid "address"
+msgstr "адрес"
+
+#: orders/models.py:14
+msgid "postal code"
+msgstr "почтовый индекс"
+
+#: orders/models.py:15
+msgid "city"
+msgstr "город"
+
+#: orders/models.py:16
+msgid "created"
+msgstr "дата создания"
+
+#: orders/models.py:17
+msgid "updated"
+msgstr "обновлен"
+
+#: orders/models.py:18
+msgid "paid"
+msgstr "оплачен"
+
+#: orders/models.py:21
+msgid "discount"
+msgstr "размер скидки"
+
+#: orders/models.py:39
+msgid "price"
+msgstr "цена"
+
+#: orders/models.py:40
+msgid "quantity"
+msgstr "количество"
+
+#: orders/templates/orders/order/create.html:12
+msgid "Checkout"
+msgstr "Оформление заказа"
+
+#: orders/templates/orders/order/create.html:18
+msgid "Your order"
+msgstr "Ваш заказ"
+
+#: orders/templates/orders/order/create.html:33
+#, python-format
+msgid "\"%(code)s\" (%(discount)s%% off)"
+msgstr "\"%(code)s\" (скидка %(discount)s%%)"
+
+#: orders/templates/orders/order/create.html:41
+msgid "Total"
+msgstr "Итого"
+
+#: orders/templates/orders/order/create.html:50
+msgid "Enter your data"
+msgstr "Введите ваши данные"
+
+#: orders/templates/orders/order/create.html:57
+msgid "Place order"
+msgstr "Заказать"
+
+#~| msgid "created"
+#~ msgid "^create/$"
+#~ msgstr "^create/$"
+
+#~ msgid "off"
+#~ msgstr "скидка"

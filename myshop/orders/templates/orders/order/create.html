@@ -1,0 +1,64 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  Checkout
+{% endblock %}
+
+{% block content %}
+  <section class="create-order">
+    <div class="create-order__title-bar">
+      <h1 class="create-order__title">
+        {% translate "Checkout" %}
+      </h1>
+    </div>
+    <div class="create-order__content">
+      <div class="create-order__info">
+        <h3 class="create-order__subtitle">
+          {% translate "Your order" %}
+        </h3>
+        <ul class="list create-order__list">
+          {% for item in cart %}
+            <li class="create-order__list-item">
+              <p class="create-order__text">
+                {{ item.quantity }}x {{ item.product.name }}
+              </p>
+              <p class="create-order__text create-order__text_type_price">
+                ${{ item.total_price }}
+              </p>
+            </li>
+          {% endfor %}
+          {% if cart.coupon  %}
+            <li>
+              {% blocktranslate with code=cart.coupon.code discount=cart.coupon.discount trimmed %}
+                "{{ code }}" ({{ discount }}% off)
+              {% endblocktranslate %}
+              <span>-${{ cart.get_discount|floatformat:"2" }}</span>
+            </li>
+          {% endif %}
+        </ul>
+        <p class="create-order__text create-order__text_type_total-price">
+          {% translate "Total" %}: ${{ cart.get_total_price }}
+        </p>
+      </div>
+      <form
+        action="."
+        method="post"
+        class="create-order__form"
+      >
+        <h3 class="create-order__subtitle">
+          {% translate "Enter your data" %}
+        </h3>
+        <ul class="list create-order__input-list">
+          {{ form.as_ul }}
+        </ul>
+        <input
+          type="submit"
+          value="{% translate 'Place order' %}"
+          class="create-order__button"
+        >
+        {% csrf_token %}
+      </form>
+    </div>
+  </section>
+{% endblock %}

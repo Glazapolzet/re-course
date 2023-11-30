@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+  {% if category %}
+    {{ category.name }}
+  {% else %}
+    {% translate "Products" %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <section class="shop">
+    <div class="sidebar">
+      <div class="sidebar__wrapper">
+        <h3 class="sidebar__title">
+          {% translate "Categories" %}
+        </h3>
+        <ul class="list sidebar__list">
+          <li class="sidebar__list-item {% if not category %}sidebar__list-item_selected{% endif %}">
+            <a
+              class="link capitalize sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+              href="{% url 'product_list' %}"
+            >
+              {% translate "all" %}
+            </a>
+          </li>
+          {% for c in categories %}
+            <li class="sidebar__list-item {% if category.slug == c.slug %}sidebar__list-item_selected{% endif %}">
+              <a
+                class="link capitalize sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+                href="{{ c.get_absolute_url }}"
+              >
+                {{ c.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="products">
+      <div class="products__container">
+        <div class="products__title-bar">
+          <h1 class="capitalize products__title">
+            {% if category %}
+              {{ category.name }}
+            {% else %}
+              {% translate "Products" %}
+            {% endif %}
+          </h1>
+        </div>
+        <ul class="list products__list">
+          {% for product in products %}
+            <li class="products__list-item">
+              <div class="card">
+                <a
+                  class="link card__wrapper-link"
+                  href="{{ product.get_absolute_url }}"
+                >
+                  <img
+                    class="card__image"
+                    src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
+                    alt="{{ product.name }}"
+                  >
+                  <p class="card__name">
+                    {{ product.name }}
+                  </p>
+                  <p class="card__price">
+                    ${{ product.price }}
+                  </p>
+                </a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endblock %}

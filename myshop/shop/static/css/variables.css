@@ -1,0 +1,17 @@
+:root {
+    --color-primary: #F3F2ED;
+    --color-special: #ad5d50;
+    --color-accent: #45523e;
+
+    --color-white: #fff;
+    --color-light: #cccccc;
+
+    --color-text-primary: #000;
+    --color-text-secondary: #fff;
+
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    --transition-primary: .15s ease-in;
+}

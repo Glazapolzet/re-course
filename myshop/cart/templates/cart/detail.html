@@ -1,0 +1,105 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+  Shopping cart
+{% endblock %}
+
+{% block content %}
+  <section class="cart">
+    <div class="cart__title-bar">
+      <h1 class="cart__title">
+        {% translate "Your shopping cart" %}
+      </h1>
+    </div>
+    {% if cart %}
+      <table class="cart__table">
+        <thead class="cart__table-head">
+          <tr class="cart__table-row">
+            <th class="cart__table-header">{% translate "Image" %}</th>
+            <th class="cart__table-header">{% translate "Product" %}</th>
+            <th class="cart__table-header">{% translate "Quantity" %}</th>
+            <th class="cart__table-header">{% translate "Remove" %}</th>
+            <th class="cart__table-header">{% translate "Unit price" %}</th>
+            <th class="cart__table-header">{% translate "Price" %}</th>
+          </tr>
+        </thead>
+        <tbody class="cart__table-body">
+          {% for item in cart %}
+            {% with product=item.product %}
+              <tr class="cart__table-row">
+                <td class="cart__table-data">
+                  <a class="link cart__link" href="{{ product.get_absolute_url }}">
+                    <img
+                      class="cart__image"
+                      src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
+                      alt="{{ product.name }}"
+                    >
+                  </a>
+                </td>
+                <td class="cart__table-data">{{ product.name }}</td>
+                <td class="cart__table-data">{{ item.quantity }}</td>
+                <td class="cart__table-data">
+                  <a
+                    class="link cart__link"
+                    href="{% url 'cart_remove' product.id %}"
+                  >
+                    <p class="cart__remove">{% translate "Remove" %}</p>
+                  </a>
+                </td>
+                <td class="cart__table-data">${{ item.price }}</td>
+                <td class="cart__table-data">${{ item.total_price }}</td>
+              </tr>
+            {% endwith %}
+          {% endfor %}
+          {% if cart.coupon %}
+            <tr class="cart__table-row cart__table-row_type_subtotal">
+              <td class="cart__table-data cart__table-data_type_subtotal">{% translate "Subtotal" %}</td>
+              <td class="cart__table-data" colspan="4"></td>
+              <td class="cart__table-data">${{ cart.get_total_price }}</td>
+            </tr>
+            <tr class="cart__table-row cart__table-row_type_coupon">
+              <td class="cart__table-data cart__table-data_type_coupon">
+                {% blocktranslate with code=cart.coupon.code discount=cart.coupon.discount trimmed %}
+                  "{{ code }}" coupon ({{ discount }}% off)
+                {% endblocktranslate %}
+              </td>
+              <td class="cart__table-data" colspan="4"></td>
+              <td class="cart__table-data">
+                - ${{ cart.get_discount|floatformat:"2" }}
+              </td>
+            </tr>
+          {% endif %}
+          <tr class="cart__table-row cart__table-row_total">
+            <td class="cart__table-data cart__table-data_total">
+              {% translate "Total" %}
+            </td>
+            <td colspan="4"></td>
+            <td class="cart__table-data cart__table-data_total-price">
+              ${{ cart.get_total_price_after_discount|floatformat:"2" }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <form class="cart__apply-coupon-form" action="{% url 'apply' %}" method="post">
+        {{ coupon_apply_form }}
+        <input class="cart__apply-coupon-input" type="submit" value="Apply">
+        {% csrf_token %}
+      </form>
+    {% else %}
+      <p>{% translate "Your cart is empty." %}</p>
+    {% endif %}
+    <div class="cart__links">
+      <a href="{% url 'product_list' %}" class="link cart__link cart__link_type_submit">
+        {% translate "Continue shopping" %}
+      </a>
+      <a
+        href="{% url 'order_create' %}"
+        class="link cart__link cart__link_type_submit cart__link_type_submit_accent"
+      >
+        {% translate "Checkout" %}
+      </a>
+    </div>
+  </section>
+{% endblock %}

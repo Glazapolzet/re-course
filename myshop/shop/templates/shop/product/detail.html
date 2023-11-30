@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+  {% if category %}
+    {{ category }}
+  {% else %}
+    {% translate "Products" %}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <section class="product">
+    <img
+      class="product__image"
+      src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
+      alt="{{ product.name }}"
+    >
+    <div class="product__content">
+      <h1 class="product__name">
+        {{ product }}
+      </h1>
+      <a class="link product__link" href="{{ product.category.get_absolute_url }}">
+        <h2 class="capitalize product__category">
+          {{ product.category }}
+        </h2>
+      </a>
+      <p class="product__price">
+        ${{ product.price }}
+      </p>
+      <form
+        class="product__form"
+        action="{% url 'cart_add' product.id %}"
+        method="post"
+      >
+        {{ cart_product_form }}
+        {% csrf_token %}
+        <input
+            class="product__button product__button_type_submit"
+            type="submit"
+            value="{% translate 'Add to cart' %}"
+        >
+      </form>
+      <p class="product__description">
+        {{ product.description|linebreaks }}
+      </p>
+    </div>
+  </section>
+{% endblock %}

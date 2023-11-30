@@ -1,0 +1,24 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+  Thank you
+{% endblock %}
+
+{% block content %}
+  <section class="order-created">
+    <div class="popup">
+      <div class="popup__title-bar">
+        <h1 class="popup__title">
+          Thank you
+        </h1>
+      </div>
+      <div class="popup__content">
+        <p class="popup__text">Your order has been successfully completed. Your order number is
+          <span class="popup__text popup__text_strong">
+            {{ order.id }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
