@@ -46,8 +46,6 @@ INSTALLED_APPS = [
 
 CART_SESSION_ID = 'cart'
 
-# 'myshop.middleware.set_lang_middleware.set_lang_middleware',
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
