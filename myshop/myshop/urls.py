@@ -13,6 +13,7 @@ urlpatterns = i18n_patterns(
     re_path(r'^cart/', include('cart.urls')),
     re_path(r'^orders/', include('orders.urls')),
     re_path(r'^coupons/', include('coupons.urls')),
+    # re_path(r'^')
     re_path(r'^', include('shop.urls')),
 )
 

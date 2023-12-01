@@ -26,6 +26,7 @@
               {% translate "all" %}
             </a>
           </li>
+          {% get_current_language as LANGUAGE_CODE %}
           {% for c in categories %}
             <li class="sidebar__list-item {% if category.slug == c.slug %}sidebar__list-item_selected{% endif %}">
               <a

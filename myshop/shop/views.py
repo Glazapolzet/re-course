@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
+from django.utils.translation import get_language, activate, get_supported_language_variant, get_language_from_request
+
 
 def home(request):
     return redirect("product_list")
@@ -20,6 +22,8 @@ def get_all_categories(request):
 
 
 def get_category(request, category_slug):
+    print(get_language())
+    print(get_language_from_request(request, check_path=True))
     print(request.headers)
     try:
         category = Category.objects.get(slug=category_slug)
