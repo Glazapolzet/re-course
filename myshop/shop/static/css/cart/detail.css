@@ -131,6 +131,19 @@
     box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
 }
 
+.cart__empty {
+    display: flex;
+    width: 100%;
+    margin: 180px 0 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart__text {
+    margin: 0;
+    font-size: 18px;
+}
+
 .cart__links {
     font-family: inherit;
     display: flex;

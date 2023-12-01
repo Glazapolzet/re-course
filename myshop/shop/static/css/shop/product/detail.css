@@ -2,7 +2,6 @@
     box-sizing: border-box;
     display: flex;
     column-gap: 70px;
-    justify-content: stretch;
     padding: 40px;
     border-radius: 10px;
     background-color: var(--color-white);
@@ -10,13 +9,15 @@
     -moz-box-shadow: 0 1px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 0 1px 10px 2px rgba(34, 60, 80, 0.2);
     width: 70%;
+    max-width: 1450px;
     height: auto;
 }
 
 .product__image {
-    max-width: 40%;
-    min-width: 40%;
-    object-fit: cover;
+    max-width: 45%;
+    width: fit-content;
+    height: fit-content;
+    object-fit: contain;
     border-radius: 6px;
 }
 
