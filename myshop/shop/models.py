@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -14,7 +15,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def get_absolute_url(self):
-        return f"{self.slug}"
+        return reverse("get_category", kwargs={"category_slug": self.slug})
 
 
 class Product(models.Model):
@@ -40,5 +41,9 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
 
     def get_absolute_url(self):
-        return f"{self.category.slug}/{self.slug}/{self.id}"
+        return reverse("get_product", kwargs={
+            "category_slug": self.category.slug,
+            "product_slug": self.slug,
+            "product_id": self.id,
+        })
 

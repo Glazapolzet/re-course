@@ -12,12 +12,13 @@ class CategoryTranslationOptions(TranslationOptions):
     fields = ('name', 'slug',)
 
 
-# class ProductTranslationOptions(TranslationOptions):
-#     """
-#     Класс настроек интернационализации полей модели Category.
-#     """
-#
-#     fields = ('name', 'slug', 'description',)
+class ProductTranslationOptions(TranslationOptions):
+    """
+    Класс настроек интернационализации полей модели Product.
+    """
+
+    fields = ('name', 'slug', 'description',)
 
 
 translator.register(Category, CategoryTranslationOptions)
+translator.register(Product, ProductTranslationOptions)
