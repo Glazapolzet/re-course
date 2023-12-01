@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,19 +44,7 @@ INSTALLED_APPS = [
     'orders',
     'coupons',
     'rosetta',
-    'parler',
 ]
-
-PARLER_LANGUAGES = {
-    None:  (
-        {'code': 'en'},
-        {'code': 'ru'},
-    ),
-    'default': {
-        'fallback': 'en',
-        'hide_untranslated': False,
-    }
-}
 
 
 CART_SESSION_ID = 'cart'
@@ -141,6 +130,9 @@ LANGUAGES = (
     ('en', _('English')),
     ('ru',  _('Russian')),
 )
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+MODELTRANSLATION_TRANSLATION_REGISTRY = 'MYSHOP.translation'
 
 LANGUAGE_CODE = 'en'
 

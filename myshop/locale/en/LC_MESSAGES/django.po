@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 16:20+0300\n"
-"PO-Revision-Date: 2023-11-30 12:59+0000\n"
-"Last-Translator:   <test@ya.ru>\n"
+"POT-Creation-Date: 2023-12-01 14:22+0300\n"
+"PO-Revision-Date: 2023-12-01 08:00+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,40 +19,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: myshop/settings.py:128
+#: myshop/settings.py:130
 msgid "English"
 msgstr "English"
 
-#: myshop/settings.py:129
+#: myshop/settings.py:131
 msgid "Russian"
 msgstr "Russian"
 
-#: myshop/urls.py:13
-msgid "^cart/"
-msgstr "^cart/"
-
-#: myshop/urls.py:14
-msgid "^orders/"
-msgstr "^orders/"
-
-#: myshop/urls.py:15
-msgid "^coupons/"
-msgstr "^coupons/"
-
-#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:18
+#: shop/templates/shop/base.html:9 shop/templates/shop/base.html:46
 msgid "My shop"
 msgstr "My shop"
 
-#: shop/templates/shop/base.html:24
+#: shop/templates/shop/base.html:21
+msgid "Language"
+msgstr "Language"
+
+#: shop/templates/shop/base.html:53
 msgid "Your cart:"
 msgstr "Your cart:"
 
-#: shop/templates/shop/base.html:27
+#: shop/templates/shop/base.html:57
 #, python-format
 msgid "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 msgstr "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 
-#: shop/templates/shop/base.html:33
+#: shop/templates/shop/base.html:63
 msgid "Your cart is empty."
 msgstr "Your cart is empty."
 
@@ -73,6 +65,15 @@ msgstr "Categories"
 #: shop/templates/shop/product/list.html:26
 msgid "all"
 msgstr "all"
+
+#~ msgid "^cart/"
+#~ msgstr "^cart/"
+
+#~ msgid "^orders/"
+#~ msgstr "^orders/"
+
+#~ msgid "^coupons/"
+#~ msgstr "^coupons/"
 
 #~ msgid "^shop/"
 #~ msgstr "My shop"
