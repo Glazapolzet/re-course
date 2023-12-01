@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:22+0300\n"
-"PO-Revision-Date: 2023-12-01 08:00+0000\n"
+"POT-Creation-Date: 2023-12-02 00:07+0300\n"
+"PO-Revision-Date: 2023-12-01 21:07+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: myshop/settings.py:130
+#: myshop/settings.py:124
 msgid "English"
 msgstr "English"
 
-#: myshop/settings.py:131
+#: myshop/settings.py:125
 msgid "Russian"
 msgstr "Russian"
 
@@ -48,9 +48,13 @@ msgstr "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 msgid "Your cart is empty."
 msgstr "Your cart is empty."
 
+#: shop/templates/shop/base.html:75
+msgid "Vypova Alice 2023"
+msgstr "Vypova Alice 2023"
+
 #: shop/templates/shop/product/detail.html:9
 #: shop/templates/shop/product/list.html:9
-#: shop/templates/shop/product/list.html:49
+#: shop/templates/shop/product/list.html:52
 msgid "Products"
 msgstr "Products"
 
@@ -58,11 +62,11 @@ msgstr "Products"
 msgid "Add to cart"
 msgstr "Add to cart"
 
-#: shop/templates/shop/product/list.html:18
+#: shop/templates/shop/product/list.html:19
 msgid "Categories"
 msgstr "Categories"
 
-#: shop/templates/shop/product/list.html:26
+#: shop/templates/shop/product/list.html:28
 msgid "all"
 msgstr "all"
 
