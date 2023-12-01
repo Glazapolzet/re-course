@@ -20,6 +20,7 @@ def get_all_categories(request):
 
 
 def get_category(request, category_slug):
+    print(request.headers)
     try:
         category = Category.objects.get(slug=category_slug)
         products = Product.objects.filter(category=category)
