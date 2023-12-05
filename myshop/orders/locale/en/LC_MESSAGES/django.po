@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 16:09+0300\n"
-"PO-Revision-Date: 2023-11-30 12:59+0000\n"
-"Last-Translator:   <test@ya.ru>\n"
+"POT-Creation-Date: 2023-12-02 15:04+0300\n"
+"PO-Revision-Date: 2023-12-02 12:05+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,15 @@ msgstr "Enter your data"
 msgid "Place order"
 msgstr "Place order"
 
-#~| msgid "created"
+#: orders/templates/orders/order/created.html:4
+#: orders/templates/orders/order/created.html:12
+msgid "Thank you"
+msgstr "Thank you"
+
+#: orders/templates/orders/order/created.html:17
+msgid "Your order has been successfully completed. Your order number is"
+msgstr "Your order has been successfully completed. Your order number is"
+
 #~ msgid "^create/$"
 #~ msgstr "created"
 

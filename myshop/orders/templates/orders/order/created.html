@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
 {% block title %}
   Thank you
@@ -9,11 +10,12 @@
     <div class="popup">
       <div class="popup__title-bar">
         <h1 class="popup__title">
-          Thank you
+          {% translate "Thank you" %}
         </h1>
       </div>
       <div class="popup__content">
-        <p class="popup__text">Your order has been successfully completed. Your order number is
+        <p class="popup__text">
+          {% translate "Your order has been successfully completed. Your order number is" %}
           <span class="popup__text popup__text_strong">
             {{ order.id }}
           </span>
@@ -22,3 +24,4 @@
     </div>
   </section>
 {% endblock %}
+

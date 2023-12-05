@@ -38,7 +38,7 @@
           {% endif %}
         </ul>
         <p class="create-order__text create-order__text_type_total-price">
-          {% translate "Total" %}: ${{ cart.get_total_price }}
+          {% translate "Total" %}: ${{ cart.get_total_price_after_discount|floatformat:"2" }}
         </p>
       </div>
       <form

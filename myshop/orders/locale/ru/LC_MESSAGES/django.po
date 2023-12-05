@@ -8,17 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 16:09+0300\n"
-"PO-Revision-Date: 2023-11-30 13:07+0000\n"
-"Last-Translator:   <test@ya.ru>\n"
+"POT-Creation-Date: 2023-12-02 15:04+0300\n"
+"PO-Revision-Date: 2023-12-02 12:05+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: orders/models.py:10
@@ -94,7 +92,15 @@ msgstr "Введите ваши данные"
 msgid "Place order"
 msgstr "Заказать"
 
-#~| msgid "created"
+#: orders/templates/orders/order/created.html:4
+#: orders/templates/orders/order/created.html:12
+msgid "Thank you"
+msgstr "Благодарим вас за покупку"
+
+#: orders/templates/orders/order/created.html:17
+msgid "Your order has been successfully completed. Your order number is"
+msgstr "Ваш заказ был успешно создан. Ваш номер заказа"
+
 #~ msgid "^create/$"
 #~ msgstr "^create/$"
 
