@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-02 00:07+0300\n"
-"PO-Revision-Date: 2023-12-01 21:07+0000\n"
+"PO-Revision-Date: 2023-12-05 16:31+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -42,7 +42,7 @@ msgstr "Корзина"
 #: shop/templates/shop/base.html:57
 #, python-format
 msgid "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
-msgstr "%(total_items)s товар%(total_items_plural)s, $%(total_price)s"
+msgstr "%(total_items)s товаров, $%(total_price)s"
 
 #: shop/templates/shop/base.html:63
 msgid "Your cart is empty."
