@@ -4,10 +4,12 @@
     --color-tertiary: #b06051;
 
     --color-special-red: red;
+    --color-special-sidebar-red: #d21414;
     --color-special-violet: #8910C6;
+    --color-black: #000;
 
-    --color-white: rgba(247, 248, 250, 0.80);
-    --color-light: #d7d7d7;
+    --color-white: #fff;
+    --color-light: rgba(247, 248, 250, 0.70);
 
     --color-text-primary: #fff;
     --color-text-secondary: #000;

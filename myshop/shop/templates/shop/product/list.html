@@ -30,10 +30,10 @@
               {% translate "Categories" %}
             </h3>
           </div>
-          <ul class="list sidebar__list">
+          <ul class="sidebar__list">
             <li class="sidebar__list-item {% if not category %}sidebar__list-item_selected{% endif %}">
               <a
-                class="link capitalize sidebar__link sidebar__link_bold {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+                class="sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
                 href="{% url 'product_list' %}"
               >
                 {% translate "all" %}
@@ -43,7 +43,7 @@
             {% for c in categories %}
               <li class="sidebar__list-item {% if category.slug == c.slug %}sidebar__list-item_selected{% endif %}">
                 <a
-                  class="link capitalize sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+                  class="sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
                   href="{{ c.get_absolute_url }}"
                 >
                   {{ c.name }}
@@ -56,7 +56,7 @@
       <div class="products">
         <div class="products__container">
           <div class="products__title-bar">
-            <h1 class="capitalize products__title">
+            <h1 class="products__title">
               {% if category %}
                 {{ category.name }}
               {% else %}
@@ -64,12 +64,12 @@
               {% endif %}
             </h1>
           </div>
-          <ul class="list products__list">
+          <ul class="products__list">
             {% for product in products %}
               <li class="products__list-item">
                 <div class="card">
                   <a
-                    class="link card__wrapper-link"
+                    class="card__wrapper-link"
                     href="{{ product.get_absolute_url }}"
                   >
                     <img
@@ -78,10 +78,10 @@
                       alt="{{ product.name }}"
                     >
                     <div class="card__text-wrapper">
-                      <p class="card__name">
+                      <p class="card__text card__text__type_name">
                         {{ product.name }}
                       </p>
-                      <p class="card__price">
+                      <p class="card__text card__text__type_price">
                         ${{ product.price }}
                       </p>
                     </div>

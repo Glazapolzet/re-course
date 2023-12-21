@@ -25,7 +25,7 @@
             <li class="header__languages-list-item">
               <a
                 href="/{{ language.code }}/"
-                class="link header__link"
+                class="header__link"
               >
                 <p
                   {% if language.code == LANGUAGE_CODE %}
@@ -41,18 +41,18 @@
           {% endfor %}
         </ul>
       </div>
-      <a href="/" class="link header__link header__main-logo">
-        <p class="header__text header__text_bold">
+      <a href="/" class="header__link header__main-logo">
+        <p class="header__text">
           {% translate "My shop" %}
         </p>
       </a>
       <div class="header__cart">
         {% with total_items=cart|length %}
           {% if cart|length > 0 %}
-            <p class="header__text header__text_bold">
+            <p class="header__text">
               {% translate "Your cart:" %}
             </p>
-            <a class="link header__link" href="{% url 'cart_detail' %}">
+            <a class="header__link" href="{% url 'cart_detail' %}">
               <p class="header__text header__text_decorated">
                 {% blocktranslate with total_items_plural=total_items|pluralize total_price=cart.get_total_price trimmed %}
                   {{ total_items }} item{{ total_items_plural }}, ${{ total_price }}
