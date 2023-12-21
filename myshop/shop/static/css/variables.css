@@ -1,15 +1,20 @@
 :root {
-    --color-primary: #F3F2ED;
-    --color-special: #b06051;
-    --color-accent: #45523e;
+    --color-primary: #272727;
+    --color-secondary: #8910C6;
+    --color-tertiary: #b06051;
 
-    --color-white: #fff;
+    --color-special-red: red;
+    --color-special-violet: #8910C6;
+
+    --color-white: rgba(247, 248, 250, 0.80);
     --color-light: #d7d7d7;
 
-    --color-text-primary: #000;
-    --color-text-secondary: #fff;
+    --color-text-primary: #fff;
+    --color-text-secondary: #000;
 
-    --font-family-primary: 'Roboto', sans-serif;
+    --font-family-primary: 'RussoOne', 'Roboto', sans-serif;
+    --font-family-secondary: 'Roboto', sans-serif;
+    --font-family-special: 'MonumentExtended', 'Roboto';
     --font-weight-normal: 400;
     --font-weight-bold: 700;
 

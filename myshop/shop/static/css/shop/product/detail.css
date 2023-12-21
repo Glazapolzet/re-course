@@ -46,7 +46,7 @@
 .product__category {
     margin: 20px 0 0;
     font-size: 28px;
-    color: var(--color-special);
+    color: var(--color-tertiary);
     text-decoration: none;
     max-width: fit-content;
 }
@@ -55,7 +55,7 @@
     margin: 70px 0 0;
     font-size: 36px;
     font-weight: var(--font-weight-bold);
-    color: var(--color-accent);
+    color: var(--color-secondary);
     max-width: fit-content;
 }
 
@@ -101,7 +101,7 @@
 .product__button_type_submit {
     padding: 10px;
     color: var(--color-text-secondary);
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
 }
 
 .product__description, .product__description ~ p {

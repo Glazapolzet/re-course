@@ -41,7 +41,7 @@
           {% endfor %}
         </ul>
       </div>
-      <a href="/" class="link header__link">
+      <a href="/" class="link header__link header__main-logo">
         <p class="header__text header__text_bold">
           {% translate "My shop" %}
         </p>
@@ -60,15 +60,15 @@
               </p>
             </a>
           {% else %}
-            {% translate "Your cart is empty." %}
+            {% translate "Your cart is empty" %}
           {% endif %}
         {% endwith %}
+        <div class="header__cart-icon"></div>
       </div>
     </header>
     <main class="main">
       {% block content %}
       {% endblock %}
     </main>
-    <div class="main-image"></div>
   </body>
 </html>

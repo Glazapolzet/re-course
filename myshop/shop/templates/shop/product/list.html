@@ -12,73 +12,85 @@
 
 {% block content %}
   <section class="shop">
-    <div class="sidebar">
-      <div class="sidebar__wrapper">
-        <div class="sidebar__titlebar">
-          <h3 class="sidebar__title">
-            {% translate "Categories" %}
-          </h3>
-        </div>
-        <ul class="list sidebar__list">
-          <li class="sidebar__list-item {% if not category %}sidebar__list-item_selected{% endif %}">
-            <a
-              class="link capitalize sidebar__link sidebar__link_bold {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
-              href="{% url 'product_list' %}"
-            >
-              {% translate "all" %}
-            </a>
-          </li>
-          {% get_current_language as LANGUAGE_CODE %}
-          {% for c in categories %}
-            <li class="sidebar__list-item {% if category.slug == c.slug %}sidebar__list-item_selected{% endif %}">
+    <div class="image-divider">
+      <p class="image-divider__text">
+        {% translate "Shoe Shop" %}
+      </p>
+      <img
+        class="image-divider__image"
+        src="{% static 'images/sneakers_wallpaper.jpg' %}"
+        alt="Divider image"
+      >
+    </div>
+    <div class="shop__content">
+      <div class="sidebar">
+        <div class="sidebar__wrapper">
+          <div class="sidebar__titlebar">
+            <h3 class="sidebar__title">
+              {% translate "Categories" %}
+            </h3>
+          </div>
+          <ul class="list sidebar__list">
+            <li class="sidebar__list-item {% if not category %}sidebar__list-item_selected{% endif %}">
               <a
-                class="link capitalize sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
-                href="{{ c.get_absolute_url }}"
+                class="link capitalize sidebar__link sidebar__link_bold {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+                href="{% url 'product_list' %}"
               >
-                {{ c.name }}
+                {% translate "all" %}
               </a>
             </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="products">
-      <div class="products__container">
-        <div class="products__title-bar">
-          <h1 class="capitalize products__title">
-            {% if category %}
-              {{ category.name }}
-            {% else %}
-              {% translate "Products" %}
-            {% endif %}
-          </h1>
-        </div>
-        <ul class="list products__list">
-          {% for product in products %}
-            <li class="products__list-item">
-              <div class="card">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% for c in categories %}
+              <li class="sidebar__list-item {% if category.slug == c.slug %}sidebar__list-item_selected{% endif %}">
                 <a
-                  class="link card__wrapper-link"
-                  href="{{ product.get_absolute_url }}"
+                  class="link capitalize sidebar__link {% if category.slug == c.slug %}sidebar__link_selected{% endif %}"
+                  href="{{ c.get_absolute_url }}"
                 >
-                  <img
-                    class="card__image"
-                    src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
-                    alt="{{ product.name }}"
-                  >
-                  <div class="card__text-wrapper">
-                    <p class="card__name">
-                      {{ product.name }}
-                    </p>
-                    <p class="card__price">
-                      ${{ product.price }}
-                    </p>
-                  </div>
+                  {{ c.name }}
                 </a>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="products">
+        <div class="products__container">
+          <div class="products__title-bar">
+            <h1 class="capitalize products__title">
+              {% if category %}
+                {{ category.name }}
+              {% else %}
+                {% translate "Products" %}
+              {% endif %}
+            </h1>
+          </div>
+          <ul class="list products__list">
+            {% for product in products %}
+              <li class="products__list-item">
+                <div class="card">
+                  <a
+                    class="link card__wrapper-link"
+                    href="{{ product.get_absolute_url }}"
+                  >
+                    <img
+                      class="card__image"
+                      src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
+                      alt="{{ product.name }}"
+                    >
+                    <div class="card__text-wrapper">
+                      <p class="card__name">
+                        {{ product.name }}
+                      </p>
+                      <p class="card__price">
+                        ${{ product.price }}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
   </section>

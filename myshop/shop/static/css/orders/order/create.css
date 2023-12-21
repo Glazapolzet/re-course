@@ -15,7 +15,7 @@
 
 .create-order__title-bar {
     padding: 15px;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
     border-radius: 6px;
     -webkit-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
@@ -88,7 +88,7 @@
 }
 
 .create-order__text_type_price {
-    color: var(--color-accent);
+    color: var(--color-secondary);
 }
 
 .create-order__text_type_total-price {
@@ -126,7 +126,7 @@
     padding: 10px;
     border: none;
     cursor: pointer;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
     color: var(--color-text-secondary);
     font-family: inherit;
     font-weight: var(--font-weight-bold);

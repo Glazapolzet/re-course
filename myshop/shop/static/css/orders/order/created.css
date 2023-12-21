@@ -22,7 +22,7 @@
 
 .popup__title-bar {
     padding: 10px 15px;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
     width: 100%;
     text-align: center;
 }

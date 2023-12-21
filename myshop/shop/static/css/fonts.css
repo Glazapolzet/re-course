@@ -1,15 +1,13 @@
 @font-face {
-  src: url('../fonts/Inter-Regular.woff2') format('woff2'),
-  url('../fonts/Inter-Regular.ttf') format('truetype');
-  font-family: "Inter";
+  src: url('../fonts/MonumentExtended-Regular.otf') format('opentype');
+  font-family: "MonumentExtended";
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  src: url('../fonts/Inter-Medium.woff2') format('woff2'),
-  url('../fonts/Inter-Medium.ttf') format('truetype');
-  font-family: "Inter";
+  src: url('../fonts/RussoOne-Regular.ttf') format('truetype');
+  font-family: "RussoOne";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }

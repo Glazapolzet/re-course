@@ -8,7 +8,7 @@
 
 .cart__title-bar {
     padding: 15px;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
     border-radius: 6px;
     -webkit-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
@@ -36,7 +36,7 @@
 }
 
 .cart__table-head {
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
 }
 
 .cart__table-header {
@@ -49,7 +49,7 @@
 .cart__table-row {}
 
 .cart__table-row_type_coupon {
-    background-color: var(--color-special);
+    background-color: var(--color-tertiary);
     color: var(--color-white);
 }
 
@@ -63,7 +63,7 @@
 }
 
 .cart__table-row_total {
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
 }
 
 .cart__table-data {
@@ -86,7 +86,7 @@
 
 .cart__remove {
     margin: 0;
-    color: var(--color-special);
+    color: var(--color-tertiary);
 }
 
 .cart__image {

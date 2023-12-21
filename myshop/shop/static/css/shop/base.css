@@ -1,12 +1,13 @@
 .header {
   position: fixed;
   width: 100%;
-  display: flex;
-  min-height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 75px;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
   padding: 0 20px;
-  background-color: var(--color-special);
+  background-color: var(--color-primary);
   -webkit-box-shadow: 4px 7px 8px 0 rgba(34, 60, 80, 0.1);
   -moz-box-shadow: 4px 7px 8px 0 rgba(34, 60, 80, 0.1);
   box-shadow: 4px 7px 8px 0 rgba(34, 60, 80, 0.1);
@@ -42,18 +43,33 @@
 
 .header__languages-list-link_selected {}
 
+.header__main-logo {
+
+}
+
 .header__cart {
-  color: var(--color-text-secondary);
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  color: var(--color-text-primary);
+}
+
+.header__cart-icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/dashicons_cart.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header__text {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   margin: 0;
   display: inline;
 }
 
 .header__text_decorated {
-  border-bottom: 1px solid var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-special-red);
 }
 
 .header__text_bold {
@@ -66,7 +82,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 120px 40px 60px;
+  padding: 75px 0 60px;
   height: 100%;
   align-items: center;
   z-index: 1;
