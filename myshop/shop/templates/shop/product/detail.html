@@ -21,8 +21,8 @@
       <h1 class="product__name">
         {{ product }}
       </h1>
-      <a class="link product__link" href="{{ product.category.get_absolute_url }}">
-        <h2 class="capitalize product__category">
+      <a class="product__link" href="{{ product.category.get_absolute_url }}">
+        <h2 class="product__category">
           {{ product.category }}
         </h2>
       </a>

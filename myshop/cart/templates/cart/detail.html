@@ -30,7 +30,7 @@
             {% with product=item.product %}
               <tr class="cart__table-row">
                 <td class="cart__table-data">
-                  <a class="link cart__link" href="{{ product.get_absolute_url }}">
+                  <a class="cart__link" href="{{ product.get_absolute_url }}">
                     <img
                       class="cart__image"
                       src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.jpg' %}{% endif %}"
@@ -42,7 +42,7 @@
                 <td class="cart__table-data">{{ item.quantity }}</td>
                 <td class="cart__table-data">
                   <a
-                    class="link cart__link"
+                    class="cart__link"
                     href="{% url 'cart_remove' product.id %}"
                   >
                     <p class="cart__remove">{% translate "Remove" %}</p>
@@ -98,7 +98,7 @@
       </a>
       <a
         href="{% url 'order_create' %}"
-        class="link cart__link cart__link_type_submit cart__link_type_submit_accent"
+        class="cart__link cart__link_type_submit cart__link_type_submit_accent"
       >
         {% translate "Checkout" %}
       </a>

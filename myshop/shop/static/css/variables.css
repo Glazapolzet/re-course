@@ -1,14 +1,12 @@
 :root {
     --color-primary: #272727;
-    --color-secondary: #8910C6;
-    --color-tertiary: #b06051;
 
     --color-special-red: red;
-    --color-special-sidebar-red: #d21414;
+    --color-special-dim-red: #d21414;
     --color-special-violet: #8910C6;
-    --color-black: #000;
 
     --color-white: #fff;
+    --color-black: rgb(0, 0, 0);
     --color-light: rgba(247, 248, 250, 0.70);
 
     --color-text-primary: #fff;
@@ -18,7 +16,6 @@
     --font-family-secondary: 'Roboto', sans-serif;
     --font-family-special: 'MonumentExtended', 'Roboto';
     --font-weight-normal: 400;
-    --font-weight-bold: 700;
 
     --transition-primary: .15s ease-in;
 }

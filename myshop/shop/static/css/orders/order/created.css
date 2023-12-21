@@ -7,13 +7,14 @@
 }
 
 .popup {
+    padding: 15px;
     position: absolute;
-    background-color: var(--color-white);
-    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    max-width: 475px;
+    max-width: 500px;
     overflow: hidden;
     -webkit-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 1px 5px 8px 0 rgba(34, 60, 80, 0.2);
@@ -22,7 +23,7 @@
 
 .popup__title-bar {
     padding: 10px 15px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-special-dim-red);
     width: 100%;
     text-align: center;
 }

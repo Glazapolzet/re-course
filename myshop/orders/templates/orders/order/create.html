@@ -17,7 +17,7 @@
         <h3 class="create-order__subtitle">
           {% translate "Your order" %}
         </h3>
-        <ul class="list create-order__list">
+        <ul class="create-order__list">
           {% for item in cart %}
             <li class="create-order__list-item">
               <p class="create-order__text">
@@ -49,7 +49,7 @@
         <h3 class="create-order__subtitle">
           {% translate "Enter your data" %}
         </h3>
-        <ul class="list create-order__input-list">
+        <ul class="create-order__input-list">
           {{ form.as_ul }}
         </ul>
         <input
