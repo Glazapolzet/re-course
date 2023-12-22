@@ -8,15 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-02 00:07+0300\n"
-"PO-Revision-Date: 2023-12-05 16:31+0000\n"
+"POT-Creation-Date: 2023-12-22 03:28+0300\n"
+"PO-Revision-Date: 2023-12-21 23:59+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: myshop/settings.py:124
@@ -37,7 +39,7 @@ msgstr "Язык"
 
 #: shop/templates/shop/base.html:53
 msgid "Your cart:"
-msgstr "Корзина"
+msgstr "Корзина:"
 
 #: shop/templates/shop/base.html:57
 #, python-format
@@ -45,16 +47,12 @@ msgid "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 msgstr "%(total_items)s товаров, $%(total_price)s"
 
 #: shop/templates/shop/base.html:63
-msgid "Your cart is empty."
-msgstr "Корзина пуста."
-
-#: shop/templates/shop/base.html:75
-msgid "Vypova Alice 2023"
-msgstr "Выпова Алиса 2023"
+msgid "Your cart is empty"
+msgstr "Корзина пуста"
 
 #: shop/templates/shop/product/detail.html:9
 #: shop/templates/shop/product/list.html:9
-#: shop/templates/shop/product/list.html:52
+#: shop/templates/shop/product/list.html:63
 msgid "Products"
 msgstr "Товары"
 
@@ -62,13 +60,20 @@ msgstr "Товары"
 msgid "Add to cart"
 msgstr "Добавить в корзину"
 
-#: shop/templates/shop/product/list.html:19
-msgid "Categories"
-msgstr "Категории"
+#: shop/templates/shop/product/list.html:17
+msgid "Street Shop"
+msgstr "Street Shop"
 
-#: shop/templates/shop/product/list.html:28
+#: shop/templates/shop/product/list.html:30
+msgid "Categories"
+msgstr "Каталог"
+
+#: shop/templates/shop/product/list.html:39
 msgid "all"
 msgstr "все"
+
+#~ msgid "Vypova Alice 2023"
+#~ msgstr "Выпова Алиса 2023"
 
 #~ msgid "^cart/"
 #~ msgstr "корзина/"

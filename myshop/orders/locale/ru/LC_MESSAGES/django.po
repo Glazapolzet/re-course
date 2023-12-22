@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-02 15:04+0300\n"
-"PO-Revision-Date: 2023-12-02 12:05+0000\n"
+"POT-Creation-Date: 2023-12-22 02:47+0300\n"
+"PO-Revision-Date: 2023-12-21 23:53+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -29,7 +29,7 @@ msgstr "фамилия"
 
 #: orders/models.py:12
 msgid "e-mail"
-msgstr "e-mail"
+msgstr "почта"
 
 #: orders/models.py:13
 msgid "address"
@@ -92,14 +92,13 @@ msgstr "Введите ваши данные"
 msgid "Place order"
 msgstr "Заказать"
 
-#: orders/templates/orders/order/created.html:4
-#: orders/templates/orders/order/created.html:12
+#: orders/templates/orders/order/created.html:13
 msgid "Thank you"
-msgstr "Благодарим вас за покупку"
+msgstr "Благодарим за покупку"
 
-#: orders/templates/orders/order/created.html:17
+#: orders/templates/orders/order/created.html:18
 msgid "Your order has been successfully completed. Your order number is"
-msgstr "Ваш заказ был успешно создан. Ваш номер заказа"
+msgstr "Заказ передан в обработку. Номер вашего заказа:"
 
 #~ msgid "^create/$"
 #~ msgstr "^create/$"

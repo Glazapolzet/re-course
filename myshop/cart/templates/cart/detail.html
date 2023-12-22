@@ -84,7 +84,7 @@
       </table>
       <form class="cart__apply-coupon-form" action="{% url 'apply' %}" method="post">
         {{ coupon_apply_form }}
-        <input class="cart__apply-coupon-input" type="submit" value="Apply">
+        <input class="cart__apply-coupon-input" type="submit" value="{% translate 'Apply' %}">
         {% csrf_token %}
       </form>
     {% else %}

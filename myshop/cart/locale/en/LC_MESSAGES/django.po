@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 10:59+0300\n"
-"PO-Revision-Date: 2023-11-30 12:58+0000\n"
-"Last-Translator:   <test@ya.ru>\n"
+"POT-Creation-Date: 2023-12-22 03:28+0300\n"
+"PO-Revision-Date: 2023-12-22 00:28+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -59,6 +59,10 @@ msgstr "\"%(code)s\" coupon (%(discount)s%% off)"
 #: cart/templates/cart/detail.html:76
 msgid "Total"
 msgstr "Total"
+
+#: cart/templates/cart/detail.html:87
+msgid "Apply"
+msgstr "Apply"
 
 #: cart/templates/cart/detail.html:92
 msgid "Your cart is empty."

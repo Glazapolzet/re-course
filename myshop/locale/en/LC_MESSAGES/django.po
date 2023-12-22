@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-02 00:07+0300\n"
-"PO-Revision-Date: 2023-12-01 21:07+0000\n"
+"POT-Creation-Date: 2023-12-22 03:28+0300\n"
+"PO-Revision-Date: 2023-12-21 23:47+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -45,16 +45,12 @@ msgid "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 msgstr "%(total_items)s item%(total_items_plural)s, $%(total_price)s"
 
 #: shop/templates/shop/base.html:63
-msgid "Your cart is empty."
-msgstr "Your cart is empty."
-
-#: shop/templates/shop/base.html:75
-msgid "Vypova Alice 2023"
-msgstr "Vypova Alice 2023"
+msgid "Your cart is empty"
+msgstr "Your cart is empty"
 
 #: shop/templates/shop/product/detail.html:9
 #: shop/templates/shop/product/list.html:9
-#: shop/templates/shop/product/list.html:52
+#: shop/templates/shop/product/list.html:63
 msgid "Products"
 msgstr "Products"
 
@@ -62,13 +58,20 @@ msgstr "Products"
 msgid "Add to cart"
 msgstr "Add to cart"
 
-#: shop/templates/shop/product/list.html:19
+#: shop/templates/shop/product/list.html:17
+msgid "Street Shop"
+msgstr "Street Shop"
+
+#: shop/templates/shop/product/list.html:30
 msgid "Categories"
 msgstr "Categories"
 
-#: shop/templates/shop/product/list.html:28
+#: shop/templates/shop/product/list.html:39
 msgid "all"
 msgstr "all"
+
+#~ msgid "Vypova Alice 2023"
+#~ msgstr "Vypova Alice 2023"
 
 #~ msgid "^cart/"
 #~ msgstr "^cart/"
